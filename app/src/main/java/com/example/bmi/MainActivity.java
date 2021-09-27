@@ -26,38 +26,25 @@ private TextView result ;
     }
 
    public void calculateBMI(View view){
-       if(isNumeric(editweight.getText().toString()) && isNumeric(editweight.getText().toString())) {
+
            double weight = Double.parseDouble(editweight.getText().toString());
            double height = Double.parseDouble(editheight.getText().toString());
            double bmi = weight / Math.pow((height / 100), 2);
-           String str = "BMI is " + bmi;
+           String str = "BMI is " + String.format("%.2f",bmi);
            result.setText(str);
-           Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
            if (bmi < 18.5) {
-               type.setText("Underweight");
+               type.setText("**Underweight**\n Your weight must be between (" +String.format("%.2f",18.5*Math.pow((height / 100), 2))+" , "+String.format("%.2f",24.9*Math.pow((height / 100), 2))+")");
 
            } else if (bmi >= 18.5 && bmi < 25) {
                type.setText("Normal Weight");
            } else if (bmi >= 25 && bmi < 30) {
-               type.setText("Overweight");
+               type.setText("**Overweight**\n Your weight must be between (" +String.format("%.2f",18.5*Math.pow((height / 100), 2))+" , "+String.format("%.2f",24.9*Math.pow((height / 100), 2))+")");
            } else {
-               type.setText("Obese");
+               type.setText("**obese**\n Your weight must be between (" +String.format("%.2f",18.5*Math.pow((height / 100), 2))+" , "+String.format("%.2f",24.9*Math.pow((height / 100), 2))+")");
 
            }
-       }else {
-           result.setText("please enter a number");
-       }
+
 
    }
-    public static boolean isNumeric(String strNum) {
-        if (strNum == null) {
-            return false;
-        }
-        try {
-            double d = Double.parseDouble(strNum);
-        } catch (NumberFormatException nfe) {
-            return false;
-        }
-        return true;
-    }
+
 }

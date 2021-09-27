@@ -14,11 +14,15 @@
         android:layout_width="match_parent"
         android:layout_height="39dp"
         android:layout_marginTop="8dp"
-        android:text="enter your height in cm" />
+        android:text="enter your height in cm"
+
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
 
     <EditText
         android:id="@+id/editheight"
         android:layout_width="match_parent"
+        android:inputType="number"
         android:layout_marginTop="8dp"
         android:layout_height="wrap_content" />
     <TextView
@@ -26,11 +30,14 @@
         android:layout_height="39dp"
         android:layout_marginTop="8dp"
         android:text="enter your weight in KG"
+        android:textStyle="bold"
+        android:textColor="@color/white"
         />
 
     <EditText
 
         android:id="@+id/editweight"
+        android:inputType="number"
         android:layout_width="match_parent"
         android:layout_marginTop="8dp"
         android:layout_height="wrap_content" />
@@ -40,24 +47,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="calculateBMI"
+        android:backgroundTint="#72AAD6"
+        android:textColor="@color/black"
         android:text="Calculate" />
 
     <TextView
         android:id="@+id/result"
         android:layout_width="match_parent"
         android:layout_height="39dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:textStyle="bold"
         android:textColor="#00ccff"
         tools:ignore="InvalidId"
-        android:layout_gravity="center"/>
+        android:gravity="center_horizontal" />
     <TextView
         android:id="@+id/type"
         android:layout_width="match_parent"
-        android:layout_height="39dp"
+        android:layout_height="match_parent"
         android:layout_marginTop="8dp"
         android:textStyle="bold"
-        android:textColor="#DD6158"
+        android:textColor="#FF62A1"
         tools:ignore="InvalidId"
-        android:layout_gravity="center"/>
+
+        android:gravity="center_horizontal"
+        />
 </LinearLayout>
