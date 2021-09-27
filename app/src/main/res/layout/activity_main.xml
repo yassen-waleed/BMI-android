@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_margin="8dp"
+    android:background="#222121"
     tools:context=".MainActivity">
 
     <TextView
@@ -48,6 +49,15 @@
         android:layout_marginTop="8dp"
         android:textStyle="bold"
         android:textColor="#00ccff"
+        tools:ignore="InvalidId"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:textColor="#DD6158"
         tools:ignore="InvalidId"
         android:layout_gravity="center"/>
 </LinearLayout>
